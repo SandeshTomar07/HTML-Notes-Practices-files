@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display property</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            text-align: center;
+            border: 5px solid black;
+            border-radius: 10px;
+            
+            display: block;
+        }
+
+        .first{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            text-align: center;
+            border: 5px solid black;
+            border-radius: 10px;
+            
+            display: inline;
+        }
+
+        .second{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            text-align: center;
+            border: 5px solid black;
+            border-radius: 10px;
+            
+            display: inline-block;
+        }
+
+        .third{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            text-align: center;
+            border: 5px solid black;
+            border-radius: 10px;
+            
+            display: ;
+        }
+        #dov2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="div1" class="box">box 1</div>
+        <div id="div2" class="box">box 2</div>
+        <div id="div3" class="box">box 3</div>
+    </div><hr>
+
+    <div id="parent">
+        <div id="div1" class="first">box 1</div>
+        <div id="div2" class="first">box 2</div>
+        <div id="div3" class="first">box 3</div>
+    </div><hr>
+
+    <div id="parent">
+        <div id="div1" class="second">box 1</div>
+        <div id="div2" class="second">box 2</div>
+        <div id="div3" class="second">box 3</div>
+    </div><hr>
+
+    <div id="parent">
+        <div id="dov1" class="third">box 1</div>
+        <div id="dov2" class="third">box 2</div>
+        <div id="dov3" class="third">box 3</div>
+    </div>
+</body>
+</html>

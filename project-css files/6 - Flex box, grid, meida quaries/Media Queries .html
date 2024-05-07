@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries property</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            padding:5px;
+        }
+
+        /*css apply for width*/
+        /*media queries full page ki hoti h matalab page ki width ho 300px */
+        @media screen and (width: 300px) {
+            .box{
+                background-color: crimson;
+            }
+        }
+
+        /*css apply for min-width*/
+        .box1{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(21, 73, 73);
+            padding:5px;
+        }
+        @media screen and (min-width: 400px) {
+            .box1{
+                height: 150px;
+                width: 150px;
+            }
+        }
+
+        /*css apply for min-width*/
+        .box2{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(221, 175, 47);
+            padding:5px;
+        }
+        @media screen and (max-width: 250px) {
+            .box2{
+                background-color: blue;
+            }
+        }
+
+        /*css apply for combination*/
+        .box3{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(214, 48, 56);
+            padding:5px;
+        }
+        @media screen and (min-width:250px) and (max-width: 300px) {
+            .box3{
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--HTML apply for width-->
+    <div class="box"> Box </div><hr>
+
+    <!--HTML apply for min-width-->
+    <div class="box1"> Box 1</div><hr>
+
+    <!--HTML apply for max-width-->
+    <div class="box2"> Box 2</div><hr>
+
+    <!--HTML apply for combination-->
+    <div class="box3"> Box 3 </div><hr>
+</body>
+</html>

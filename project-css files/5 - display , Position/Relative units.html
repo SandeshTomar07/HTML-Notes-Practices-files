@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Units</title>
+    <style>
+        #percentage{
+            height:200px;
+            width:200px;
+            background-color: aqua;
+            font-size: 25px;
+        }
+        #first{
+            background-color: blueviolet;
+            width: 60%;
+            height:50%;
+        }
+
+        #em{
+            height:300px;
+            width:300px;
+            background-color: aqua;
+            font-size: 15px;
+        }
+        #second{
+            background-color: chocolate;
+            width:50%;
+            height:50%;
+            font-size: 2em;
+        }
+
+        *{
+            font-size: 60px;
+        }
+        #rem{
+            height:200px;
+            width:200px;
+            background-color: aqua;
+            font-size: 10px;
+        }
+        #third{
+            background-color: darkgreen;
+            width:60%;
+            height:60%;
+            font-size: 0.5rem;
+        }
+
+        #vh-vw{
+            background-color: antiquewhite;
+            height: 100vh;
+            width:100v;
+        }
+    </style>
+</head>
+<body>
+    <div id="percentage">
+        first
+        <div id="first">percentage first</div>
+    </div><hr>
+
+    <div id="em">
+        second
+        <div id="second">Em second </div>
+    </div><hr>
+
+    <div id="rem">
+        Third
+        <div id="third">Rem Third</div>
+    </div><hr>
+
+    <div id="vh-vw">code 1 Lorem ipsum dolor,  sit amet consectetur adipisicing elit. Neque quasi tempore
+    </div>
+</body>
+</html>

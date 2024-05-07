@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation property </title>
+    <style>
+        h1{
+            text-align: center;
+            color: blue;
+        }
+
+        /*Css apply for Pseudo classes */
+        .btn{
+            height: 20px;
+            width: 70px;
+            border: 2px solid blue;
+            border-radius: 5px;
+            background-color: aliceblue;
+        }
+        .btn:hover {
+         height: 25px;  
+         width: 80px;
+         border: 2px solid rebeccapurple;
+        }
+        .btn:active{
+            height: 35px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: red;
+        }
+
+        /*Css apply for Transitions */
+        .btn_1{
+            height:25px;
+            width: 150px;
+            border: 2px solid blue;
+            border-radius: 5px;
+            background-color: antiquewhite;
+
+            
+            transition-property: all;
+            transition-duration: 4s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+            /*transition: all 1s ease-in-out 1s;*/
+        }
+        .btn_1:hover {
+         height: 30px;  
+         width: 160px;
+         background-color: aqua;
+        }
+        .btn_1:active{
+            height: 30px;
+            width: 160px;
+            border: 2px solid black;
+            background-color: red;
+        }
+
+        /*Css apply for Transform-Rotate */
+        .box{
+            height: 50px;
+            width: 50px;
+            padding: 5px;
+            margin: 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+            left: 100px;
+            background-color: aqua;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+        }
+        #box1:hover{
+            transform: rotate(45deg);
+        }
+        #box2:hover{
+            transform: rotateZ(90deg);
+        }
+        #box3:hover{
+            transform: rotatex(180deg);
+        }
+        #box4:hover{
+            transform: rotateY(270deg);
+        }
+
+        /*Css apply for Transform-Scale */
+        #box5:hover{
+            transform: scale(2);
+        }
+        #box6:hover{
+            transform: scale(4);
+        }
+        #box7:hover{
+            transform: scalex(2);
+        }
+        #box8:hover{
+            transform: scaleY(3);
+        }
+
+        /*Css apply for Transform-translate */
+        #box9:hover{
+            transform: translate(-50px);
+        }
+        #box10:hover{
+            transform: translate(50px,50px);
+        }
+        #box11:hover{
+            transform: translateX(50px);
+        }
+        #box12:hover{
+            transform: translateY(50px);
+        }
+
+        /*Css apply for Transform-skew */
+        .box_1{
+            height: 50px;
+            width: 50px;
+            padding: 5px;
+            margin: 15px;
+            border: 2px solid black;
+            border-radius: 5px;
+            display: inline-block;
+            background-color: rgb(255, 0, 76);
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+        }
+        #box13:hover{
+            transform: skew(45deg);
+        }
+        #box14:hover{
+            transform: skew(90deg);
+        }
+        #box15:hover{
+            transform: skewX(45deg);
+        }
+        #box16:hover{
+            transform: skewY(45deg);
+        }
+
+        /*Css apply for Transform-Animation */
+        .animation{
+            height: 100px;
+            width: 100px;
+            padding: 5px;
+            margin: 15px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: darksalmon;
+            position: relative;
+            top: 10px;
+            left: 10px;
+
+            animation-name: ghumakkad;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+            /*animation: ghumakkad 4s ease-in-out 0s infinite alternate;*/
+        }
+        @keyframes ghumakkad {
+            from {right: 10px}
+            to {left: 800px}
+        }
+
+        .animation_1{
+            height: 100px;
+            width: 100px;
+            padding: 5px;
+            margin: 15px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: darksalmon;
+            position: relative;
+            top: 10px;
+            left: 10px;
+
+            animation: ghumakkad_1 4s ease-in-out 0s infinite alternate;
+        }
+        @keyframes ghumakkad_1 {
+            0% {left: 10px; top:0px;}
+            50% {left: 150px; top:100px;}
+            100% {left: 300px; top:0px;}
+        }
+    </style>
+</head>
+<body>
+    <!--html apply for Pseudo classes-->
+    <h1 id="h1">Pseudo classes</h1>
+    <button class="btn">pseudo</button><hr>
+
+    <!--html apply for Transitions -->
+    <h1 id="h1">Transitions property </h1>
+    <button class="btn_1"> Transitions </button><hr>
+
+    <!--html apply for Transform-Rotate -->
+    <h1 id="h1">Transform-Rotate property </h1>
+    <div id="box1" class="box">box 1</div>
+    <div id="box2" class="box">box 2</div>
+    <div id="box3" class="box">box 3</div>
+    <div id="box4" class="box">box 4</div><hr>
+
+    <!--html apply for Transform-scale -->
+    <h1 id="h1">Transform-scale property </h1>
+    <div id="box5" class="box">box 5</div>
+    <div id="box6" class="box">box 6</div>
+    <div id="box7" class="box">box 7</div>
+    <div id="box8" class="box">box 8</div><hr>
+
+    <!--html apply for Transform-translate -->
+    <h1 id="h1">Transform-translate property </h1>
+    <div id="box9" class="box">box 9</div>
+    <div id="box10" class="box">box 10</div>
+    <div id="box11" class="box">box 11</div>
+    <div id="box12" class="box">box 12</div><hr>
+
+    <!--html apply for Transform-skew -->
+    <h1 id="h1">Transform-skew property </h1>
+    <div id="box13" class="box_1">box 13</div>
+    <div id="box14" class="box_1">box 14</div>
+    <div id="box15" class="box_1">box 15</div>
+    <div id="box16" class="box_1">box 16</div><hr>
+
+     <!--html apply for Transform-Animation -->
+     <h1 id="h1">Animation property </h1>
+     <div class="animation">Animation</div><hr>
+
+     <div class="animation_1">Animation_1</div><hr>
+</body>
+</html>

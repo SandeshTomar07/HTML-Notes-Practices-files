@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set level 5</title>
+    <style>
+        *{
+            margin:0px;
+            Padding:0px;
+        }
+        header{
+            background-color: aqua;
+            height: 30px;
+        }
+        nav{
+            padding: 5px;
+        }
+        nav a{
+            text-decoration: none;
+            margin: 22px;
+            padding:5px;
+        }
+        #first{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border-radius: 50%;
+        }
+
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: chocolate;
+            margin: 5px;
+            border: 3px solid black;
+            display: inline-block;
+        }
+        #box4{
+            position: fixed;
+            right:30px;
+        }
+        #box2{
+            z-index: 2;
+            position: absolute;
+            left:20px;
+        }
+        #container{
+            border:3px solid black;
+            margin: 5px;
+        }
+        footer{
+            position: fixed;
+            bottom:5px;
+            background-color: black;
+            position: absolute;
+            color:goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Gellery</a>
+            <a href="#">About us</a>
+            <a href="#">Contact us</a>
+        </nav>
+    </header>
+    <main>
+        <div id="first"></div>
+        <div id="container">
+            <div id="box1" class="box">box 1</div>
+            <div id="box2" class="box">box 2</div>
+            <div id="box3" class="box">box 3</div>
+            <div id="box4" class="box">box 4</div>
+        </div>
+    </main>
+    <footer> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A facere minima sunt perspiciatis possimus, reprehenderit quam culpa molestias quos labore nesciunt asperiores! Laboriosam perspiciatis doloribus odit. Excepturi voluptatem cum debitis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima ex quidem reiciendis? Facilis veniam et necessitatibus expedita aliquid. In, accusantium?</footer>
+</body>
+</html>

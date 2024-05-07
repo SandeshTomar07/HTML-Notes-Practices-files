@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox property</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .box{
+            height: 80px;
+            width: 80px;
+            border:3px solid black;
+            margin: 5px;
+        }
+        #heading{
+            text-align: center;
+        }
+        #container{
+            height: 150px;
+            width: 600px;
+            border: 3px solid black;
+            padding:10px;
+            margin:20px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+        #container_1{
+            height: 150px;
+            width: 600px;
+            border: 3px solid black;
+            padding:10px;
+            margin:20px;
+
+            display: flex;
+            justify-content: center;
+        }
+        #box1{background-color: aqua;}
+        #box2{background-color: blueviolet;}
+        #box3{background-color: yellowgreen;}
+        #box4{background-color: yellow;}
+
+        /*Css apply for wrap*/
+        #container_wrap{
+            height: 250px;
+            width: 600px;
+            border: 3px solid black;
+            padding:10px;
+            margin:20px;
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /*Css apply for alignitem*/
+        #container_alignitem{
+            height: 300px;
+            width: 600px;
+            border: 3px solid black;
+            padding:10px;
+            margin:20px;
+
+            display: flex;
+            align-items: center;
+        }
+        #container_alignitem_1{
+            height: 300px;
+            width: 600px;
+            border: 3px solid black;
+            padding:10px;
+            margin:20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row-reverse;
+        }
+
+        /*Css apply for align-content*/
+        #container_aligncontent{
+            height: 300px;
+            width: 500px;
+            border: 3px solid black;
+            padding:10px;
+            margin:20px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+
+        /*Css apply for align-self*/
+        #container_alignself{
+            height: 200px;
+            width: 500px;
+            border: 3px solid black;
+            padding:10px;
+            margin:20px;
+
+            display: flex;
+            align-self: start;
+        }
+        #box_1{
+            background-color: crimson;
+        }
+        #box_2{
+            background-color: dimgray;
+            align-self: center;
+        }
+        #box_3{
+            background-color: lime;
+        }
+        #box_4{
+            background-color: darksalmon;
+        }
+
+        /*Css apply for shrink */
+        #container_shrink{
+            height: 100px;
+            width: 300px;
+            border: 3px solid black;
+            padding:10px;
+            margin:20px;
+
+            display: flex;
+            align-self: start;
+        }
+        #shrink_1{
+            background-color: aqua;
+        }
+        #shrink_2{
+            background-color: crimson;
+        }
+        #shrink_3{
+            background-color: darkcyan;
+            flex-shrink: 5;
+        }
+        #shrink_4{
+            background-color: darkorchid;
+        }
+
+        /*Css apply for grow */
+        #container_grow{
+            height: 100px;
+            width: 500px;
+            border: 3px solid black;
+            padding:10px;
+            margin:20px;
+
+            display: flex;
+            align-self: start;
+        }
+        #grow_1{
+            background-color: aqua;
+        }
+        #grow_2{
+            background-color: crimson;
+        }
+        #grow_3{
+            background-color: darkcyan;
+            flex-grow: 1;
+        }
+        #grow_4{
+            background-color: darkorchid;
+        }
+
+        /*Css apply for order */
+        #container_order{
+            height: 100px;
+            width: 500px;
+            border: 3px solid black;
+            padding:10px;
+            margin:20px;
+
+            display: flex;
+            align-self: start;
+        }
+        #order_1{
+            background-color: aqua;
+            order: 3;
+        }
+        #order_2{
+            background-color: crimson;
+            order: 1;
+        }
+        #order_3{
+            background-color: darkcyan;
+            order: 4;
+        }
+        #order_4{
+            background-color: darkorchid;
+            order: 2;
+        }
+
+        /*Css apply for Grid */
+        .container_grid{
+            display: grid;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 100px 100px;
+        }
+        .item1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-color: aquamarine;
+        }
+        .item2{
+            grid-column: 1/2;
+            grid-row: 2/2;
+            background-color: rgb(157, 105, 216);
+        }
+        .item3{
+            grid-column: 2/2;
+            grid-row: 2/2;
+            background-color: rgb(218, 88, 116);
+        }
+        .item4{
+            grid-column: 2/2;
+            grid-row: 1/2;
+            background-color: rgb(169, 224, 97);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Flex Justify property container</h1>
+    <div id="container">
+        <div id="box1" class="box">Flex item 1</div>
+        <div id="box2" class="box">Flex item 2</div>
+        <div id="box3" class="box">Flex item 3</div>
+        <div id="box4" class="box">Flex item 4</div>
+    </div><hr>
+    <h1 id="heading">Flex Justify-1 property container</h1>
+    <div id="container_1">
+        <div id="box1" class="box">Flex item 1</div>
+        <div id="box2" class="box">Flex item 2</div>
+        <div id="box3" class="box">Flex item 3</div>
+        <div id="box4" class="box">Flex item 4</div>
+    </div><hr>
+
+    <!-- HTML apply for wrap-->
+    <h1 id="heading">Flex Wrap property container</h1>
+    <div id="container_wrap">
+        <div id="box1" class="box">Flex item 1</div>
+        <div id="box2" class="box">Flex item 2</div>
+        <div id="box3" class="box">Flex item 3</div>
+        <div id="box4" class="box">Flex item 4</div>
+        <div id="box" class="box" style="background-color:blue;">Flex item 5</div>
+        <div id="box" class="box" style="background-color:blue;">Flex item 6</div>
+        <div id="box" class="box" style="background-color:blue;">Flex item 7</div>
+        <div id="box" class="box" style="background-color:blue;">Flex item 8</div>
+        <div id="box" class="box" style="background-color:blue;">Flex item 9</div>
+    </div><hr>
+
+    <!-- HTML apply for Align-item-->
+    <h1 id="heading">Flex Align-item property container</h1>
+    <div id="container_alignitem">
+        <div id="box1" class="box">Flex item 1</div>
+        <div id="box2" class="box">Flex item 2</div>
+        <div id="box3" class="box">Flex item 3</div>
+    </div><hr>
+    <h1 id="heading">Flex Align-item property container-1</h1>
+    <div id="container_alignitem_1">
+        <div id="box1" class="box">Flex item 1</div>
+        <div id="box2" class="box">Flex item 2</div>
+        <div id="box3" class="box">Flex item 3</div>
+    </div><hr>
+
+    <!-- HTML apply for Align-content-->
+    <h1 id="heading">Flex Align-content property container</h1>
+    <div id="container_aligncontent">
+        <div id="box1" class="box">Flex item 1</div>
+        <div id="box2" class="box">Flex item 2</div>
+        <div id="box3" class="box">Flex item 3</div>
+        <div id="box4" class="box">Flex item 4</div>
+        <div id="box" class="box" style="background-color:blue;">Flex item 5</div>
+        <div id="box" class="box" style="background-color:blue;">Flex item 6</div>
+        <div id="box" class="box" style="background-color:blue;">Flex item 7</div>
+    </div><hr>
+
+    <!-- HTML apply for Align-self -->
+    <h1 id="heading">Flex Align-self property container</h1>
+    <div id="container_alignself">
+        <div id="box_1" class="box">Flex item 1</div>
+        <div id="box_2" class="box">Flex item 2</div>
+        <div id="box_3" class="box">Flex item 3</div>
+        <div id="box_4" class="box">Flex item 4</div>
+    </div><hr>
+
+    <!-- HTML apply for shrink -->
+    <h1 id="heading">Flex Shrink property container</h1>
+    <div id="container_shrink">
+        <div id="shrink_1" class="box">Flex item 1</div>
+        <div id="shrink_2" class="box">Flex item 2</div>
+        <div id="shrink_3" class="box">Flex item 3</div>
+        <div id="shrink_4" class="box">Flex item 4</div>
+    </div><hr>
+
+    <!-- HTML apply for grow -->
+    <h1 id="heading">Flex Grow property container</h1>
+    <div id="container_grow">
+        <div id="grow_1" class="box">Flex item 1</div>
+        <div id="grow_2" class="box">Flex item 2</div>
+        <div id="grow_3" class="box">Flex item 3</div>
+        <div id="grow_4" class="box">Flex item 4</div>
+    </div><hr>
+
+    <!-- HTML apply for order-->
+    <h1 id="heading">Flex Order property container</h1>
+    <div id="container_order">
+        <div id="order_1" class="box">Flex item 1</div>
+        <div id="order_2" class="box">Flex item 2</div>
+        <div id="order_3" class="box">Flex item 3</div>
+        <div id="order_4" class="box">Flex item 4</div>
+    </div><hr>
+
+    <!-- HTML apply for Grid -->
+    <div class="container_grid">
+        <div class="item1">item 1</div>
+        <div class="item2">item 2</div>
+        <div class="item3">item 3</div>
+        <div class="item4">item 4</div>
+    </div>
+</body>
+</html>
