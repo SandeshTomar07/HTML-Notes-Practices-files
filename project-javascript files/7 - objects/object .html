@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        product = {
+            company: 'Mango',
+            price: 861,
+            item_name: 'T-shirt',
+        }
+        console.log(product);
+        console.log(product.company);
+        console.log(product.price);
+        console.log(product.item_name);
+
+        product.company = 'Banana';
+        console.log(product.company);
+        
+        /*product = {
+            company: 'Mango',
+            price: 861,
+            'item-name': 'T-shirt',
+        }
+        console.log(product.item-name);
+        console.log(product['item-name']);
+        
+        let propertyName = 'item-name';
+        console.log(product[propertyName]);
+        console.log(product.propertyName);
+
+        delete product.company;
+        console.log(product);
+        delete product['price'];
+        console.log(product)*/
+
+
+        /*product = {
+            company: 'Mango',
+            price: 861,
+            'item-name': 'T-shirt',
+            rating: {
+                stars: 4.5,
+                noOfReviews: 87
+            },
+            displayPrice: function() {
+                console.log(`price of the projuct is = ${this.price}`);
+            },
+        }
+        console.log(product.rating.stars);
+        console.log(product.rating.noOfReviews);
+        product.displayPrice();
+        console.log();
+        Math.random();
+
+        console.log('This is a Flexstudy'.toUpperCase());
+        console.log('This is a flexstudy' .replace('flexstudy','Papper host '));*/
+
+
+        /*let a = 5;
+        let b = a;
+        console.log(`a=${a}, b=${b}`);
+        a = 8;
+        console.log(`a=${a}, b=${b}`);
+
+        let x = {num: 5};
+        let y = x;
+        console.log(`x=${x.num}, y=${y.num}`);
+        x.num = 8;
+        console.log(`x=${x.num}, y=${y.num}`);
+        y.num = 3;
+        console.log(`x=${x.num}, y=${y.num}`);
+
+        let p = {pop: 'king'};
+        let q = {pop: 'king'};
+        console.log(p == q);
+        console.log(p === q);*/
+
+
+       /* //shortcuts
+        product = {
+            company: 'Mango',
+            price: 861,
+            item_name: 'T-shirt',
+        }
+        //De-structuring***
+        let {company, price} = product;
+        console.log(company);
+        console.log(price);*/
+
+       /* //property shorthand
+        let price = 862;
+        // let product = {
+        //     company: 'Mango',
+        //     item_name: 'T-shirt',
+        //     price: price,
+        // }
+        // is same as
+        let product1 = {
+            company: 'Mango',
+            item_name: 'T-shirt',
+            price,
+        }
+        console.log(product1.price);*/
+
+
+        /* //method shorthand
+        product = {
+            company: 'Mango',
+            price: 861,
+            'item-name': 'T-shirt',
+            displayPrice: function() {
+                return `$${this.rice.toFixed(2)}`;
+            },
+        }
+        //is same as
+        product = {
+            company: 'Mango',
+            price: 861,
+            'item-name': 'T-shirt',
+            displayPrice() {
+                return `$${this.rice.toFixed(2)}`;
+            },
+        }
+        console.log(displayPrice());*/
+    </script>
+</body>
+</html>

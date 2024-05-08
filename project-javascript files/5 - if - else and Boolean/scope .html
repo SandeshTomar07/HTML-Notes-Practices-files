@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        let age = 21;
+        let userMassage;
+        if (age > 18) {
+            userMassage = 'You can drive';
+        } else {
+            userMassage = 'Use a Bicycle';
+        }
+        console.log(userMassage);
+
+        /*let age = 17;
+        if (age > 18) {
+            let userMassage = 'You can drive';
+            console.log(userMassage);
+        } else {
+           let userMassage = 'Use a Bicycle';
+           console.log(userMassage);
+        }*/
+        
+    </script>
+</body>
+</html>
